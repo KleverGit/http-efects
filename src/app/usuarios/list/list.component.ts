@@ -10,13 +10,18 @@ export class ListComponent implements OnInit {
 
   public usuarios: UsuarioModel[] = [];
 
-  constructor(private userService: UsuarioService) { }
+  constructor(
+    // Con effects no se usa http service
+    // private userService: UsuarioService
+    ) { }
 
   ngOnInit() {
-    this.userService.getUsers().subscribe(users => {
+    // Un 
+    /*this.userService.getUsers().subscribe(users => {
       console.log(users);
       this.usuarios = users;
-    });
+    });*/
+
   }
 
 }
